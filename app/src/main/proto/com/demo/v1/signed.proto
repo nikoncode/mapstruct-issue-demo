@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.demo.v1;
+
+option java_multiple_files = true;
+
+message Signed {
+  Data data = 1;
+}
+
+message Data {
+  repeated Item items = 1;
+  Item2 item2 = 2;
+}
+
+message Item {
+  string id = 1;
+  string title = 2;
+}
+
+message Item2 {
+  string id = 1;
+}
